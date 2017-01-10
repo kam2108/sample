@@ -11,18 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var AppTitle: UILabel!
-    var tapcount = 0
+    
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
+    
     
     @IBAction func PushmeTapped(_ sender: Any) {
         
-      tapcount = tapcount + 1
-        if tapcount <= 10{
-            AppTitle.text = " Hello World"
-        }
-        if tapcount >= 10{
-            (AppTitle.text = "You have tapped the button 10 times")
-        }
+        
+        (AppTitle.text) = "Answer:\(Double(text1.text!)! + Double(text2.text!)!)"
+      
     }
+    
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
+
+
 

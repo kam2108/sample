@@ -22,29 +22,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-I6-G2a">
-                                <rect key="frame" x="190" y="28" width="35" height="21"/>
+                                <rect key="frame" x="190.33333333333334" y="28.000000000000004" width="34.333333333333314" height="20.333333333333339"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2K-ls-irL">
-                                <rect key="frame" x="174" y="58" width="67" height="30"/>
+                                <rect key="frame" x="174" y="57.333333333333329" width="67" height="29.999999999999986"/>
                                 <state key="normal" title="PUSH ME"/>
                                 <connections>
                                     <action selector="PushmeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XqA-BV-Rgs"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b4g-L6-DiK">
+                                <rect key="frame" x="157.66666666666669" y="96.333333333333329" width="100.00000000000006" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MyL-lh-GEJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIV-Ib-h8m">
+                                <rect key="frame" x="157.66666666666669" y="135.33333333333334" width="100.00000000000006" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OIV-Ib-h8m" firstAttribute="width" secondItem="b4g-L6-DiK" secondAttribute="width" id="0SL-CD-ghK"/>
                             <constraint firstItem="D2K-ls-irL" firstAttribute="top" secondItem="BXl-I6-G2a" secondAttribute="bottom" constant="9" id="0t1-fE-A6G"/>
                             <constraint firstItem="BXl-I6-G2a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5Wb-o8-A57"/>
+                            <constraint firstItem="b4g-L6-DiK" firstAttribute="centerX" secondItem="D2K-ls-irL" secondAttribute="centerX" id="74G-MS-JFm"/>
                             <constraint firstItem="D2K-ls-irL" firstAttribute="centerX" secondItem="BXl-I6-G2a" secondAttribute="centerX" id="G7k-I2-Wed"/>
+                            <constraint firstItem="b4g-L6-DiK" firstAttribute="top" secondItem="D2K-ls-irL" secondAttribute="bottom" constant="9" id="KHC-ah-fIo"/>
+                            <constraint firstItem="OIV-Ib-h8m" firstAttribute="top" secondItem="b4g-L6-DiK" secondAttribute="bottom" constant="9" id="Udg-FH-Uus"/>
+                            <constraint firstItem="OIV-Ib-h8m" firstAttribute="centerX" secondItem="b4g-L6-DiK" secondAttribute="centerX" id="hO5-Wg-yJ3"/>
                             <constraint firstItem="BXl-I6-G2a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zlj-Ci-gvM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="AppTitle" destination="BXl-I6-G2a" id="alL-PF-Rwq"/>
+                        <outlet property="Text1" destination="b4g-L6-DiK" id="MWv-KZ-L0L"/>
+                        <outlet property="Text2" destination="OIV-Ib-h8m" id="QdA-1w-SBO"/>
+                        <outlet property="text1" destination="b4g-L6-DiK" id="Bd6-y5-9Yj"/>
+                        <outlet property="text2" destination="OIV-Ib-h8m" id="GYA-Bk-AtB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
