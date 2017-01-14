@@ -19,21 +19,27 @@ class ViewController: UIViewController {
     
     @IBAction func PushmeTapped(_ sender: Any) {
         
+        let addition = false
         
-        (AppTitle.text) = "Answer:\(Double(text1.text!)! + Double(text2.text!)!)"
-      
+        if addition {
+            AppTitle.text = "Answer:\(Double(text1.text!)!, +Double(text2.text!)!)"
+            
+        } else {
+            (AppTitle.text) = "Answer:\(Double(text1.text!)! - Double(text2.text!)!)"
+        }
+        
     }
     
     
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
